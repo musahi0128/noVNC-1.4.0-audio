@@ -1,0 +1,11 @@
+[Service]
+Type=simple
+WorkingDirectory=/home/ubuntu/.local/share/novnc
+ExecStart=/bin/bash audio-plugin/audio-proxy.sh -l 5711
+Restart=on-failure
+
+[Unit]
+After=network-online.target
+
+[Install]
+WantedBy=default.target

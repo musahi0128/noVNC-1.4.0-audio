@@ -1,0 +1,11 @@
+[Service]
+Type=simple
+WorkingDirectory=/home/ubuntu/.local/share/novnc
+ExecStart=/usr/bin/websockify --web=. --token-plugin=TokenFile --token-source=./audio-plugin/websockify.token.conf 6080
+Restart=on-failure
+
+[Unit]
+After=network-online.target
+
+[Install]
+WantedBy=default.target
