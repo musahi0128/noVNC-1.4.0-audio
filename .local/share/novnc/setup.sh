@@ -1,5 +1,6 @@
 #!/bin/bash
 cd $HOME/.local/share/novnc
+chmod a+x audio-plugin/audio-proxy.sh
 sudo apt update
 sudo apt install -yq socat gstreamer1.0-tools gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad
 sudo apt clean
